@@ -25,7 +25,7 @@ const OrderStatus = ({paymentstatus}:Paymentstatuso) => {
             }
             <Stack spacing={2} justifyContent={'center'} direction={'row'} >
                 <Button onClick={()=> navigate('/store')} variant="outlined">Back to Store</Button>
-                {paymentstatus &&<Button onClick={()=>navigate('/receipt')} variant="contained">Order Receipt</Button>}
+                {paymentstatus &&<Button onClick={()=>navigate('/receipt')} sx={{color:'#fff'}} variant="contained">Order Receipt</Button>}
             </Stack>
         </Box>
     </Box>
