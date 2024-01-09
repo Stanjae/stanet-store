@@ -6,7 +6,7 @@ import Navbar from "../Components/NavBar/Navbar"
 const ShopRoot = () => {
   return (
     <>
-      <Navbar/>
+      <Navbar/> 
       <Box sx={{paddingX:'20px', marginTop:{md:'70px', xs:'80px'}}}>
         <Outlet/>
       </Box>

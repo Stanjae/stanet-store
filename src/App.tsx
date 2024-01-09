@@ -16,6 +16,7 @@ import CartPage from './Pages/Cartpage/CartPage';
 import Checkout from './Pages/Checkout/Checkout';
 import { ThemeProvider } from '@mui/material';
 import OrderConfirmation from './Pages/OrderConfirmation/OrderConfirmation.jsx';
+import Index from './Pages/ContactUs/Index.js';
 
 const theme = createTheme({
  palette: {
@@ -81,7 +82,7 @@ const router = createBrowserRouter([
       {path:'receipt', element:<OrderConfirmation/>},
       {
         path:'contact-us',
-        element:<h2></h2>
+        element:<Index/>
       }
     ]
   },
