@@ -48,3 +48,12 @@ body {
   max-width: 400px;
   line-height: 1.3;
 }
+
+
+@media screen and (max-width: 936px) {
+  .parallax-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+}

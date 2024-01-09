@@ -9,7 +9,7 @@ const OrderConfirmation = () => {
     const navigate = useNavigate();
   return (
     <Box sx={{px:{md:6, xs:1}, py:{md:6, xs:2}, mx:'auto', display:'flex', justifyContent:'center'}}>
-        <Paper elevation={3} sx={{px:3, pt:5, pb:2, width:'75%'}}>
+        <Paper elevation={3} sx={{px:3, pt:5, pb:2, width:{md:'75%', xs:'100%'}}}>
             <Typography py={2} gutterBottom align='center' fontWeight={500} variant='h4'>
                 Order Receipt
             </Typography>
@@ -19,7 +19,7 @@ const OrderConfirmation = () => {
             <Typography gutterBottom align='center'>
                 <span>Order Ref</span> {getOrder?.customer_reference}
             </Typography>
-            <Stack my={4} spacing={2} justifyContent={'center'} direction={'row'} >
+            <Stack my={4} spacing={2} justifyContent={'center'} direction={{md:'row', xs:'column'}} >
                 <Button startIcon={<Home/>} onClick={()=> navigate('/')} variant="outlined">Back to Home</Button>
                 {<Button endIcon={<ShoppingBag/>} sx={{color:'#fff'}} onClick={()=>navigate('/store')} variant="contained"> Continue Shopping </Button>}
             </Stack>

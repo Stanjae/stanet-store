@@ -243,6 +243,17 @@ export default function Navbar() {
               justifyContent: "flex-end",
             }}
           >
+            <Link to={"/cart-page"}>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="primary"
+              >
+                <Badge badgeContent={data?.total_items} color="error">
+                  <ShoppingCart />
+                </Badge>
+              </IconButton>
+            </Link>
             <IconButton
               size="large"
               aria-label="show more"

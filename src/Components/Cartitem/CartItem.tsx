@@ -11,7 +11,12 @@ const CusPaper = styled(Paper)(({ theme }) => ({
     marginBottom: theme.spacing(2),
     display: 'flex',
     justifyContent: 'space-between',
+    flexDirection:'row',
     alignItems: 'center',
+    width:'100%',
+    [theme.breakpoints.down('md')]:{
+      flexDirection:'column'
+    }
     
   }));
 
@@ -47,11 +52,11 @@ const CartItem: React.FC<CartItemProps> = ({ name, price, quantity, image, id })
     <CusPaper elevation={3}>
        <img style={{objectFit:'contain', width:'40px'}} src={image}/>
       <Typography variant="subtitle1">{name}</Typography>
-      <Box sx={{display:'flex',p:0.5, justifyContent:'space-between', alignItems:'center'}}> 
-      <Typography color={'info'} component={'div'} variant="subtitle1">Qty: </Typography>
+      <Box sx={{display:{md:'flex'}, flexDirection:{md:'row', xs:'column'},p:0.5, justifyContent:'space-between', alignItems:'center'}}> 
+        <Typography color={'info'} component={'div'} variant="subtitle1">Qty: </Typography>
         <Box sx={{display:'flex', justifyContent:'center'}}>
-            <Button onClick={()=> DecreaseCart(id, quantity)} variant='outlined' color='info'>-</Button>
-            <TextField sx={{width:'60px', textAlign:'center'}} value={quantity} size='small'/>
+            <Button size='small' onClick={()=> DecreaseCart(id, quantity)} variant='outlined' color='info'>-</Button>
+            <TextField sx={{width:'50px', textAlign:'center'}} value={quantity} size='small'/>
             <Button size='small' onClick={()=> IncreaseCart(id, quantity)} variant='outlined' color='info' >+</Button>
         </Box>
       </Box>

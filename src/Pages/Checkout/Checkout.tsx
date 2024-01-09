@@ -85,7 +85,7 @@ export default function Checkout() {
 
 
   return (
-    <Paper elevation={2} sx={{ width: '55%', mx:'auto', my:10 }}>
+    <Paper elevation={2} sx={{ width: {md:'55%', xs:'100%'}, mx:'auto', my:10 }}>
       <Box sx={{py:2}}>
         <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {

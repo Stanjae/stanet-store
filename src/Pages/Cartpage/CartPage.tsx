@@ -44,7 +44,7 @@ const CartPage: React.FC = () => {
 
   return (
     <CusContainer >
-        <Box sx={{display:'flex', py:'10px', justifyContent:'space-between', alignItems:'center'}}>
+        <Box sx={{display:'flex', py:'10px', justifyContent:{xs:'space-between'}, flexDirection:{md:'row', xs:'column'}, alignItems:'center'}}>
             <Typography variant="h4" gutterBottom> Your Cart</Typography>
             <Button variant='outlined' onClick={()=> Emptymutation.mutateAsync()} color='error' endIcon={<ClearAll/>} >Clear Cart</Button>
         </Box>
