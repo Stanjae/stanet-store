@@ -7,7 +7,6 @@ import {
   IconButton,
   Typography,
   List,
-  ListItem,
   ListItemText,
   ListSubheader,
   ListItemButton,
@@ -19,7 +18,7 @@ import Menu from "@mui/material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import { ContactMail, Home, LocalShipping, Send, ShoppingCart } from "@mui/icons-material";
+import { ContactMail, Home, LocalShipping, ShoppingCart } from "@mui/icons-material";
 import ImageIcon from "../../assets/23788721_6862816.svg";
 import { TopNavigation } from "../../Lib/Routes/routes";
 import { Link, NavLink, useNavigate } from "react-router-dom";
